@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain Tumor Detection</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/bit.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="#" class="brand">TumorTRACE.AI</a>
+        </div>
+        <div class="navbar-right">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/login">Login</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='images/bit.png') }}" alt="TumorTRACE.AI Logo">
+        </div>        
+        <form action="/predict" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="file">Upload an MRI Image</label>
+                <input type="file" name="file" id="file" required onchange="previewImage(event)">
+            </div>
+
+            <!-- Image Preview Section -->
+            <div class="preview">
+                <img id="preview-img" src="#" alt="Your image will appear here" style="display: none;" />
+            </div>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if result %}
+            <div class="prediction-result mt-4">
+                <h4>Prediction: {{ result }}</h4>
+            </div>
+            <!-- Display uploaded image -->
+            <div class="uploaded-image">
+                <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Uploaded Image">
+            </div>
+        {% endif %}
+    </div>
+
+    <!-- JavaScript for Image Preview -->
+    <script>
+        function previewImage(event) {
+            const preview = document.getElementById('preview-img');
+            preview.src = URL.createObjectURL(event.target.files[0]);
+            preview.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

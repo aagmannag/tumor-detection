@@ -1,0 +1,139 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #283c86, #45a247); /* Darker and fresher color gradient */
+    color: #f0f0f0; /* Soft white for text */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.7); /* Darker semi-transparent background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.navbar a {
+    color: #f0f0f0; /* Light text color */
+    text-decoration: none;
+    padding: 8px 15px;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+.brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffcc00; /* Golden accent for branding */
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.15); /* Softer transparent background */
+    border-radius: 15px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.header-text {
+    font-size: 30px;
+    color: #ffcc00; /* Matching the brand color */
+    margin-bottom: 30px;
+}
+
+.form-group label {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input[type="file"] {
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.2); /* Slight transparency for the input */
+    color: #f0f0f0; /* White text color for the input field */
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #ffcc00; /* Golden accent for buttons */
+    border: none;
+    color: #000; /* Black text for contrast */
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ffaa00; /* Slightly darker shade on hover */
+}
+
+/* Image Preview */
+.preview img {
+    margin-top: 20px;
+    max-width: 100%;
+    max-height: 400px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Adds depth to the image */
+}
+
+/* Prediction result */
+.prediction-result {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffcc00; /* Gold accent for prediction result */
+}
+
+/* About Page Styles */
+.about-container {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    color: #f0f0f0; /* Soft white text for readability */
+}
+
+.about-container p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Logo Styling */
+img {
+    max-width: 140px; /* Slightly larger size */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.logo-container {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+/* Additional hover effect */
+img:hover {
+    transform: scale(1.15); /* Slightly larger hover effect */
+    transition: transform 0.3s ease;
+}
